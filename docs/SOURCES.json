@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "design_repository": "dp-web4/web4",
+  "design_pr": 890,
+  "inspected_revision": "6e6fb35f95b0e0f9607e864a1dd03fd8b6d591ee",
+  "import_status": "pending_merge",
+  "imported_revision": null,
+  "documents": [
+    "docs/PRD_REPOSITORY_PLANE.md",
+    "docs/repository-plane/PROVIDER_CONTRACT.md",
+    "docs/repository-plane/GITEA_SPIKE.md"
+  ],
+  "tracking_fork": {
+    "repository": "dp-web4/gitea",
+    "upstream": "go-gitea/gitea",
+    "default_branch": "main",
+    "observed_revision": "9bb8751b29dc4acdda06431e61d1eb72f6b19f34",
+    "source_changes": false,
+    "maintained_fork_decision": "not_made"
+  }
+}

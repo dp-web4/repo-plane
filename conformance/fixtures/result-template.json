@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "kind": "template_not_evidence",
+  "scenario_id": "C1",
+  "provider": null,
+  "adapter_revision": null,
+  "provider_version": null,
+  "run_id": null,
+  "status": "not_run",
+  "evidence": [],
+  "operations": []
+}
