@@ -6,7 +6,8 @@
     "git_http",
     "git_ssh",
     "internal_background",
-    "workflow"
+    "workflow",
+    "operator_host"
   ],
   "operations": [
     {
@@ -35,7 +36,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -64,7 +73,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -93,7 +110,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -122,7 +147,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -151,7 +184,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -180,7 +221,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -209,7 +258,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -238,7 +295,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -267,7 +332,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -296,7 +369,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -325,7 +406,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -354,7 +443,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -383,7 +480,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -412,7 +517,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -441,7 +554,15 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     },
     {
@@ -470,7 +591,274 @@
         "workflow": {
           "status": "unmeasured",
           "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
         }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "branch_protection_change",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "webhook_configuration",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "server_hook_configuration",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "deploy_key_change",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_transfer",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_rename",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_archive",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_host": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
       }
     }
   ]

@@ -18,6 +18,16 @@ Administrative and internal mutation paths remain in the threat model. A broker 
 insufficient if equivalent mutations can bypass it through another enabled route.
 Native identity is not role occupancy; provider history is not the Web4 witness chain.
 
+Gate-control mutations and administrative routes are explicit matrix entries.
+`pre_action_seam` records hook/extension availability separately from interception
+coverage. Inapplicability requires evidence about equivalent effects, not just a
+missing API operation: a direct push of a merge commit to a target ref can produce
+the ref change a proposal merge would produce. Do not prefill such cells as `n/a`.
+
+The structural checker accepts bound evidence without verifying its truth or
+sufficiency. Passing it establishes neither a measured guarantee nor conformance;
+provider observations and review remain necessary.
+
 Do not claim a successful operation from an HTTP acceptance response alone. Lost
 responses after dispatch remain ambiguous. Expected-state changes require a new
 governed request, not an automatic retry against a newer revision.

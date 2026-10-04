@@ -15,10 +15,89 @@ class BootstrapTests(unittest.TestCase):
     def setUp(self):
         self.bundle = copy.deepcopy(load())
 
-    def test_scaffold_is_valid_but_no_provider_test_ran(self):
+    def evidence(self, provider="gitea"):
+        # Synthetic bindings exercise the validator; they are not run evidence.
+        return [{"provider": provider, "provider_version": "test-version",
+                 "adapter_revision": "test-revision", "run_id": "unit-test-only",
+                 "reference": "fixture://synthetic-observation"}]
+
+    def test_scaffold_is_valid_but_conformance_is_not_evaluated(self):
         result = validate(self.bundle)
-        self.assertEqual(result["provider_conformance"], "not_run")
-        self.assertEqual(result["unmeasured_bypass_cells"], 96)
+        self.assertEqual(result["provider_conformance"], "not_evaluated")
+        self.assertEqual(result["unmeasured_bypass_cells"], 161)
+
+    def test_bound_matrix_claim_is_accepted_without_certifying_it(self):
+        cell = self.bundle["matrix"]["operations"][0]["assessments"]["rest_api"]
+        cell.update(status="intercepted", evidence=self.evidence())
+        result = validate(self.bundle)
+        self.assertEqual(result["unmeasured_bypass_cells"], 160)
+        self.assertEqual(result["provider_conformance"], "not_evaluated")
+
+    def test_bound_scenario_result_is_accepted(self):
+        self.bundle["scenarios"]["scenarios"][0].update(
+            status="passed", evidence=self.evidence())
+        validate(self.bundle)
+
+    def test_bound_provider_support_is_accepted(self):
+        self.bundle["github"].update(implementation_status="implemented",
+                                      supported_operations=["proposal.merge"],
+                                      offline_support="unsupported",
+                                      evidence=self.evidence("github"))
+        validate(self.bundle)
+
+    def test_each_evidence_binding_is_required(self):
+        for field in self.evidence()[0]:
+            for invalid in (None, "", "   ", 42):
+                with self.subTest(field=field, invalid=invalid):
+                    evidence = self.evidence()
+                    evidence[0][field] = invalid
+                    self.bundle["scenarios"]["scenarios"][0].update(
+                        status="passed", evidence=evidence)
+                    with self.assertRaises(ValueError):
+                        validate(self.bundle)
+
+    def test_unbound_item_cannot_hide_behind_bound_evidence(self):
+        self.bundle["scenarios"]["scenarios"][0].update(
+            status="passed", evidence=self.evidence() + [{}])
+        with self.assertRaises(ValueError):
+            validate(self.bundle)
+
+    def test_wrong_provider_evidence_is_rejected(self):
+        self.bundle["github"].update(offline_support="verified", evidence=self.evidence())
+        with self.assertRaises(ValueError):
+            validate(self.bundle)
+
+    def test_evidence_shapes_are_checked(self):
+        for evidence in ("claim", {"provider": "gitea"}, ["claim"]):
+            with self.subTest(evidence=evidence):
+                self.bundle["scenarios"]["scenarios"][0].update(
+                    status="passed", evidence=evidence)
+                with self.assertRaises(ValueError):
+                    validate(self.bundle)
+
+    def test_gate_control_mutations_cannot_be_omitted(self):
+        for operation in ("branch_protection_change", "webhook_configuration",
+                          "server_hook_configuration", "deploy_key_change",
+                          "repository_transfer", "repository_rename", "repository_archive"):
+            with self.subTest(operation=operation):
+                bundle = copy.deepcopy(self.bundle)
+                bundle["matrix"]["operations"] = [row for row in bundle["matrix"]["operations"]
+                                                   if row["operation"] != operation]
+                with self.assertRaises(ValueError):
+                    validate(bundle)
+
+    def test_operator_route_cannot_be_omitted(self):
+        self.bundle["matrix"]["routes"].remove("operator_host")
+        with self.assertRaises(ValueError):
+            validate(self.bundle)
+
+    def test_pre_action_seam_requires_evidence(self):
+        seam = self.bundle["matrix"]["operations"][0]["pre_action_seam"]
+        seam["status"] = "available"
+        with self.assertRaises(ValueError):
+            validate(self.bundle)
+        seam["evidence"] = self.evidence()
+        validate(self.bundle)
 
     def test_claimed_provider_support_is_rejected(self):
         self.bundle["github"]["supported_operations"] = ["proposal.merge"]

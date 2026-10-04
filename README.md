@@ -47,7 +47,7 @@ python3 tools/check_bootstrap.py
 python3 -m unittest discover -s tools/tests -v
 ```
 
-These commands validate manifests, scenario inventory and honest unmeasured status.
+These commands validate manifests, scenario inventory and required evidence bindings.
 They perform no network requests or repository mutations. The application language
 and library/service split remain undecided; Python here is not that decision.
 
