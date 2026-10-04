@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "design_status": "provisional_pending_merge",
+  "scenarios": [
+    {
+      "id": "C1",
+      "title": "Repository lifecycle",
+      "required_operations": [
+        "repository.create",
+        "repository.get",
+        "commit.create",
+        "ref.create",
+        "content.get"
+      ],
+      "expectation": "Read exact fixture content at an immutable revision.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C2",
+      "title": "Compare and proposal",
+      "required_operations": [
+        "revision.compare",
+        "proposal.open",
+        "proposal.get"
+      ],
+      "expectation": "Normalize source and target without replacing native identifiers.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C3",
+      "title": "Review",
+      "required_operations": [
+        "review.submit",
+        "review.list"
+      ],
+      "expectation": "Preserve disposition, actor and reviewed revision binding or its absence.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C4",
+      "title": "Expected state conflict",
+      "required_operations": [
+        "ref.update",
+        "proposal.merge"
+      ],
+      "expectation": "A stale expectation must not silently overwrite newer state.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C5",
+      "title": "Merge",
+      "required_operations": [
+        "proposal.merge",
+        "revision.get"
+      ],
+      "expectation": "Observe the resulting immutable revision; acceptance alone is insufficient.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C6",
+      "title": "Ambiguous effect",
+      "required_operations": [
+        "ref.update"
+      ],
+      "expectation": "Lost response after dispatch stays ambiguous until state reconciliation.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C7",
+      "title": "Idempotent replay",
+      "required_operations": [
+        "proposal.open"
+      ],
+      "expectation": "A replay must not create a second semantic operation.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C8",
+      "title": "Provider denial",
+      "required_operations": [
+        "ref.update"
+      ],
+      "expectation": "Native denial cannot be relabeled success or bypassed by weakening ACLs.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C9",
+      "title": "Event correlation",
+      "required_operations": [
+        "event.consume"
+      ],
+      "expectation": "Correlate operations using stable evidence, not only prose.",
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "id": "C10",
+      "title": "Restart",
+      "required_operations": [
+        "proposal.merge"
+      ],
+      "expectation": "Recovery preserves idempotency and reconciliation state.",
+      "status": "not_run",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "provider": "github",
+  "implementation_status": "not_implemented",
+  "supported_operations": [],
+  "planned_operations": [
+    "repository.get",
+    "repository.create",
+    "revision.get",
+    "ref.get",
+    "ref.create",
+    "ref.update",
+    "content.get",
+    "commit.create",
+    "revision.compare",
+    "proposal.get",
+    "proposal.open",
+    "proposal.merge",
+    "review.list",
+    "review.submit",
+    "event.consume"
+  ],
+  "expected_state_guarantees": "unmeasured",
+  "idempotency_guarantees": "unmeasured",
+  "event_mechanism": "unmeasured",
+  "pre_mutation_interception": "unmeasured",
+  "direct_path_bypasses": {
+    "status": "unmeasured",
+    "matrix": "../../conformance/bypass-matrix.json"
+  },
+  "external_dependencies": {
+    "status": "unmeasured",
+    "items": []
+  },
+  "offline_support": "unmeasured",
+  "evidence": []
+}
