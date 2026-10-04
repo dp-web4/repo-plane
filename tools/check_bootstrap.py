@@ -41,7 +41,8 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def check_claim(status, evidence, *, unknown="unmeasured", provider, statuses=None, seam=False):
+def check_claim(status, evidence, *, unknown="unmeasured", provider, statuses=None, seam=False,
+                route=None, operation=None):
     """Check evidence bindings, not whether an observation proves a claim."""
     require(isinstance(status, str) and bool(status.strip()), "claim status must be non-empty")
     if statuses is not None:
@@ -55,6 +56,9 @@ def check_claim(status, evidence, *, unknown="unmeasured", provider, statuses=No
             require(isinstance(item.get(field), str) and bool(item[field].strip()),
                     f"evidence must bind {field}")
         require(item["provider"] == provider, "evidence provider mismatch")
+        for field, expected in (("route", route), ("operation", operation)):
+            if expected is not None:
+                require(item.get(field) == expected, f"evidence {field} mismatch")
         if seam:
             require(isinstance(item.get("route"), str) and item["route"] in ROUTES,
                     "seam evidence must name a native route")
@@ -120,8 +124,9 @@ def validate(bundle):
             seam = row["pre_action_seam"]
             check_claim(seam["status"], seam["evidence"], provider=name,
                         statuses=SEAM_STATUSES, seam=True)
-            for cell in row["assessments"].values():
-                check_claim(cell["status"], cell["evidence"], provider=name, statuses=ROUTE_STATUSES)
+            for route, cell in row["assessments"].items():
+                check_claim(cell["status"], cell["evidence"], provider=name, statuses=ROUTE_STATUSES,
+                            route=route, operation=row["operation"])
         unmeasured[name] = sum(cell["status"] == "unmeasured" for row in operations
                                for cell in row["assessments"].values())
     template = bundle["template"]

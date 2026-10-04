@@ -21,6 +21,11 @@ class BootstrapTests(unittest.TestCase):
                  "adapter_revision": "test-revision", "run_id": "unit-test-only",
                  "reference": "fixture://synthetic-observation"}]
 
+    def route_evidence(self, provider="gitea", route="rest_api", operation="push"):
+        evidence = self.evidence(provider)
+        evidence[0].update(route=route, operation=operation)
+        return evidence
+
     def test_scaffold_is_valid_but_conformance_is_not_evaluated(self):
         result = validate(self.bundle)
         self.assertEqual(result["provider_conformance"], "not_evaluated")
@@ -30,7 +35,7 @@ class BootstrapTests(unittest.TestCase):
 
     def test_bound_matrix_claim_is_accepted_without_certifying_it(self):
         cell = self.bundle["gitea_matrix"]["operations"][0]["assessments"]["rest_api"]
-        cell.update(status="blocked", evidence=self.evidence())
+        cell.update(status="blocked", evidence=self.route_evidence())
         result = validate(self.bundle)
         self.assertEqual(result["unmeasured_bypass_cells"], 413)
         self.assertEqual(result["provider_conformance"], "not_evaluated")
@@ -43,7 +48,7 @@ class BootstrapTests(unittest.TestCase):
     def test_provider_results_are_independent(self):
         for provider, status in (("github", "blocked"), ("gitea", "bypassable")):
             self.bundle[f"{provider}_matrix"]["operations"][0]["assessments"]["git_ssh"].update(
-                status=status, evidence=self.evidence(provider))
+                status=status, evidence=self.route_evidence(provider, "git_ssh"))
             result = validate(self.bundle)
             self.assertEqual(result["unmeasured_bypass_cells_by_provider"][provider], 206)
             if provider == "github":
@@ -66,7 +71,7 @@ class BootstrapTests(unittest.TestCase):
                     previous = copy.deepcopy(assessment)
                     wrong = "github" if provider == "gitea" else "gitea"
                     evidence = self.evidence(wrong)
-                    evidence[0].update(route="git_ssh", scope="synthetic push fixture")
+                    evidence[0].update(route="git_ssh", operation="push", scope="synthetic push fixture")
                     assessment.update(status=status, evidence=evidence)
                     with self.assertRaisesRegex(ValueError, "evidence provider mismatch"):
                         validate(self.bundle)
@@ -96,7 +101,7 @@ class BootstrapTests(unittest.TestCase):
                                     (scenario, SCENARIO_STATUSES)):
             previous = copy.deepcopy(assessment)
             evidence = self.evidence()
-            evidence[0].update(route="rest_api", scope="synthetic repository fixture")
+            evidence[0].update(route="rest_api", operation="push", scope="synthetic repository fixture")
             for status in sorted(allowed):
                 assessment.update(status=status, evidence=evidence)
                 validate(self.bundle)
@@ -115,7 +120,9 @@ class BootstrapTests(unittest.TestCase):
                     matrix = bundle[f"{provider}_matrix"]
                     row = next(r for r in matrix["operations"]
                                if r["operation"] == "branch_protection_change")
-                    row["assessments"][route].update(status="blocked", evidence=self.evidence(provider))
+                    row["assessments"][route].update(
+                        status="blocked",
+                        evidence=self.route_evidence(provider, route, row["operation"]))
                     result = validate(bundle)
                     self.assertEqual(result["unmeasured_bypass_cells_by_provider"][provider], 206)
                     del row["assessments"][route]
@@ -125,6 +132,58 @@ class BootstrapTests(unittest.TestCase):
                     matrix["routes"].remove(route)
                     with self.assertRaises(ValueError):
                         validate(bundle)
+
+    def test_route_cell_requires_exact_route_and_operation_on_every_item(self):
+        for provider in PROVIDERS:
+            for field, wrong in (("route", "git_ssh"), ("operation", "force_push")):
+                for status in ROUTE_STATUSES:
+                    for invalid in (None, "", "   ", 42, [], {}, wrong):
+                        with self.subTest(provider=provider, field=field, status=status, invalid=invalid):
+                            bundle = copy.deepcopy(self.bundle)
+                            cell = bundle[f"{provider}_matrix"]["operations"][0]["assessments"]["rest_api"]
+                            evidence = self.route_evidence(provider)
+                            evidence[0][field] = invalid
+                            cell.update(status=status, evidence=self.route_evidence(provider) + evidence)
+                            with self.assertRaisesRegex(ValueError, f"evidence {field} mismatch"):
+                                validate(bundle)
+                            del evidence[0][field]
+                            with self.assertRaisesRegex(ValueError, f"evidence {field} mismatch"):
+                                validate(bundle)
+
+    def test_one_observation_cannot_fill_other_operator_routes(self):
+        row = self.bundle["gitea_matrix"]["operations"][0]
+        evidence = self.route_evidence(route="operator_cli")
+        for route in ("operator_cli", "operator_storage", "operator_db"):
+            row["assessments"][route].update(status="blocked", evidence=evidence)
+        with self.assertRaisesRegex(ValueError, "evidence route mismatch"):
+            validate(self.bundle)
+
+    def test_one_observation_cannot_fill_other_operations(self):
+        evidence = self.route_evidence(route="web_ui")
+        for row in self.bundle["gitea_matrix"]["operations"]:
+            row["assessments"]["web_ui"].update(status="blocked", evidence=evidence)
+        with self.assertRaisesRegex(ValueError, "evidence operation mismatch"):
+            validate(self.bundle)
+
+    def test_one_run_can_explicitly_bind_multiple_routes_and_operations(self):
+        rows = self.bundle["gitea_matrix"]["operations"]
+        for row in rows:
+            for route in ("operator_cli", "operator_storage", "operator_db"):
+                row["assessments"][route].update(
+                    status="blocked", evidence=self.route_evidence(route=route, operation=row["operation"]))
+        result = validate(self.bundle)
+        self.assertEqual(result["unmeasured_bypass_cells_by_provider"]["gitea"], 207 - 3 * len(rows))
+        self.assertEqual(result["provider_conformance"], "not_evaluated")
+
+    def test_seam_presence_does_not_imply_other_routes_are_governed(self):
+        row = self.bundle["gitea_matrix"]["operations"][0]
+        evidence = self.evidence()
+        evidence[0].update(route="rest_api", scope="synthetic push fixture")
+        row["pre_action_seam"].update(status="present", evidence=evidence)
+        row["assessments"]["git_ssh"].update(
+            status="bypassable", evidence=self.route_evidence(route="git_ssh"))
+        result = validate(self.bundle)
+        self.assertEqual(result["unmeasured_bypass_cells_by_provider"]["gitea"], 206)
 
     def test_seam_evidence_requires_known_route_and_nonempty_scope(self):
         seam = self.bundle["gitea_matrix"]["operations"][0]["pre_action_seam"]

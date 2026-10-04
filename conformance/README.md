@@ -42,7 +42,11 @@ The bootstrap checker checks structure and requires evidence for claims that adv
 beyond `unmeasured`, `not_run` or `not_implemented`. Every evidence item must contain
 non-empty strings for `provider`, `provider_version`, `adapter_revision`, `run_id`
 and `reference` (the observation artifact). Every evidence item's provider must match
-its manifest, matrix or scenario assessment. Manifest evidence applies to its declared support and
+its manifest, matrix or scenario assessment. Every route-cell evidence item must also
+name the exact cell `route` and row `operation`, even when the cell is `unmeasured`.
+One run may cover multiple cells using evidence items that explicitly bind each
+cell's route and operation; sharing a `run_id` or `reference` alone does not do so.
+Manifest evidence applies to its declared support and
 guarantees; reviewers must verify that the referenced observations support each claim.
 Scenario, route and seam evidence is stored with the corresponding assessment.
 The checker reports unmeasured route-cell counts per provider and in total.
