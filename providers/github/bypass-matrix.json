@@ -1,0 +1,1052 @@
+{
+  "schema_version": 1,
+  "routes": [
+    "web_ui",
+    "rest_api",
+    "git_http",
+    "git_ssh",
+    "internal_background",
+    "workflow",
+    "operator_cli",
+    "operator_storage",
+    "operator_db"
+  ],
+  "operations": [
+    {
+      "operation": "push",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "force_push",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "branch_create",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "branch_delete",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "tag_create",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "tag_delete",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "proposal_merge",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_create",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_delete",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "visibility_change",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "acl_team_change",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "release_publish",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "package_publish",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "workflow_config",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "workflow_execution",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "mirror_configuration",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "branch_protection_change",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "webhook_configuration",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "server_hook_configuration",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "deploy_key_change",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_transfer",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_rename",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    },
+    {
+      "operation": "repository_archive",
+      "assessments": {
+        "web_ui": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "rest_api": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_http": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "git_ssh": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "internal_background": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "workflow": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_cli": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_storage": {
+          "status": "unmeasured",
+          "evidence": []
+        },
+        "operator_db": {
+          "status": "unmeasured",
+          "evidence": []
+        }
+      },
+      "pre_action_seam": {
+        "status": "unmeasured",
+        "evidence": []
+      }
+    }
+  ],
+  "provider": "github"
+}

@@ -5,8 +5,8 @@ has been demonstrated by this bootstrap. Empty supported-operation lists mean no
 adapter exists, not that the underlying provider lacks those operations.
 
 Capability declarations separate planned operations from implemented support and
-measured guarantees. The bypass matrix is entirely unmeasured. A route may only be
-marked intercepted, disabled or inapplicable after concrete configuration and evidence
+measured guarantees. Both provider bypass matrices are entirely unmeasured. A route may only be
+marked `blocked`, `bypassable`, `partial` or `not_applicable` after concrete configuration and evidence
 establish that claim; a post-action notification is not pre-action enforcement.
 
 The conformance scenarios are design inputs pending Web4 #890 adoption. A future run

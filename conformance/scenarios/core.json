@@ -13,8 +13,16 @@
         "content.get"
       ],
       "expectation": "Read exact fixture content at an immutable revision.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C2",
@@ -25,8 +33,16 @@
         "proposal.get"
       ],
       "expectation": "Normalize source and target without replacing native identifiers.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C3",
@@ -36,8 +52,16 @@
         "review.list"
       ],
       "expectation": "Preserve disposition, actor and reviewed revision binding or its absence.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C4",
@@ -47,8 +71,16 @@
         "proposal.merge"
       ],
       "expectation": "A stale expectation must not silently overwrite newer state.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C5",
@@ -58,8 +90,16 @@
         "revision.get"
       ],
       "expectation": "Observe the resulting immutable revision; acceptance alone is insufficient.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C6",
@@ -68,8 +108,16 @@
         "ref.update"
       ],
       "expectation": "Lost response after dispatch stays ambiguous until state reconciliation.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C7",
@@ -78,8 +126,16 @@
         "proposal.open"
       ],
       "expectation": "A replay must not create a second semantic operation.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C8",
@@ -88,8 +144,16 @@
         "ref.update"
       ],
       "expectation": "Native denial cannot be relabeled success or bypassed by weakening ACLs.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C9",
@@ -98,8 +162,16 @@
         "event.consume"
       ],
       "expectation": "Correlate operations using stable evidence, not only prose.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     },
     {
       "id": "C10",
@@ -108,8 +180,16 @@
         "proposal.merge"
       ],
       "expectation": "Recovery preserves idempotency and reconciliation state.",
-      "status": "not_run",
-      "evidence": []
+      "assessments": {
+        "github": {
+          "status": "not_run",
+          "evidence": []
+        },
+        "gitea": {
+          "status": "not_run",
+          "evidence": []
+        }
+      }
     }
   ]
 }
