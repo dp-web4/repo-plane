@@ -5,7 +5,7 @@ This repository is bootstrap scaffolding, not a functioning governed forge.
 
 - Preserve concurrent work. Use branches and review for implementation changes.
 - Keep authority semantics canonical in Web4; providers must not evaluate law or mint authority.
-- Do not import the proposed Web4 #890 documents until its merge is verified.
+- Web4 #890 is merged; import its design documents only with an explicit, reviewed source pin and hashes. A merged upstream PR is not a locally adopted contract.
 - Record source revisions and evidence; never call planned or untested capabilities supported.
 - Provider denial is not success. Ambiguous effects require reconciliation before retry.
 - Do not choose an application language or service/library split without recording the experiment.
