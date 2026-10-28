@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "design_status": "provisional_pending_merge",
+  "design_status": "provisional_pending_import",
   "scenarios": [
     {
       "id": "C1",
