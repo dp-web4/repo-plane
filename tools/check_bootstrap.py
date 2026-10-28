@@ -70,12 +70,15 @@ def validate(bundle):
     for name, item in bundle.items():
         require(item["schema_version"] == 1, f"{name}: unknown schema version")
     sources = bundle["sources"]
-    require(sources["import_status"] == "pending_merge" and sources["imported_revision"] is None,
+    require(sources["design_pr_status"] == "merged" and sources["design_merge_commit"]
+            == "a9244c8fb5c6baf0cad8a7b08abd19e03d506f53",
+            "bootstrap must pin the merged design provenance")
+    require(sources["import_status"] == "pending_import" and sources["imported_revision"] is None,
             "bootstrap must not claim an adopted contract")
     require(sources["tracking_fork"]["source_changes"] is False,
             "bootstrap must not claim modified Gitea")
     scenarios = bundle["scenarios"]["scenarios"]
-    require(bundle["scenarios"]["design_status"] == "provisional_pending_merge",
+    require(bundle["scenarios"]["design_status"] == "provisional_pending_import",
             "scenario design must stay provisional")
     ids = [case["id"] for case in scenarios]
     require(len(ids) == 10 and set(ids) == {f"C{i}" for i in range(1, 11)},
