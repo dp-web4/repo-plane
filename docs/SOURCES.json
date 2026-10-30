@@ -3,7 +3,9 @@
   "design_repository": "dp-web4/web4",
   "design_pr": 890,
   "inspected_revision": "6e6fb35f95b0e0f9607e864a1dd03fd8b6d591ee",
-  "import_status": "pending_merge",
+  "design_pr_status": "merged",
+  "design_merge_commit": "a9244c8fb5c6baf0cad8a7b08abd19e03d506f53",
+  "import_status": "pending_import",
   "imported_revision": null,
   "documents": [
     "docs/PRD_REPOSITORY_PLANE.md",

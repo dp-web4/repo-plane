@@ -4,9 +4,10 @@ Provider-independent repository infrastructure for Web4 societies. GitHub is a
 provider; Git is a storage/versioning substrate. Neither defines governance.
 
 **Bootstrap only:** no provider adapter, gate, service, or deployment is implemented.
-The design-document import is waiting for [Web4 #890](https://github.com/dp-web4/web4/pull/890)
-to merge. Capability manifests describe planned scope and explicitly report no
-implemented operations. Passing the bootstrap checks is not provider conformance.
+[Web4 #890](https://github.com/dp-web4/web4/pull/890) **has merged**, but its
+design documents have **not yet been imported or adopted** into this repo.
+Capability manifests describe planned scope and report no implemented operations.
+Passing bootstrap checks is not provider conformance.
 
 ## Boundaries
 
@@ -22,12 +23,13 @@ identity, role occupancy, authority, law, witness and ratification semantics.
 
 Start with [architecture](docs/ARCHITECTURE.md), [assurance](docs/ASSURANCE.md), and
 the [source/import record](docs/SOURCES.json). The PRD, provider contract and Gitea
-spike pages currently point to the exact proposed Web4 documents, not adopted copies.
+spike pages point to the merged upstream Web4 design, **not** adopted copies.
 
 ## First work
 
-1. After Web4 #890 merges, import the implementation documents with source revision
-   and content hashes; keep cross-ecosystem authority definitions canonical in Web4.
+1. Import the merged Web4 #890 design documents with source revision and content
+   hashes; keep cross-ecosystem authority definitions canonical in Web4. An upstream
+   merge does not establish import, adapter implementation, or provider conformance.
 2. Implement the smallest GitHub workflow: inspect revision/ref, propose, review,
    check expected state, merge, and observe the resulting revision.
 3. Exercise the same semantic corpus against stock Gitea; measure every mutation

@@ -288,6 +288,11 @@ class BootstrapTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate(self.bundle)
 
+    def test_merged_design_is_not_an_import(self):
+        self.assertEqual(self.bundle["sources"]["design_pr_status"], "merged")
+        self.assertEqual(self.bundle["sources"]["import_status"], "pending_import")
+        self.assertIsNone(self.bundle["sources"]["imported_revision"])
+
     def test_unadopted_import_is_rejected(self):
         self.bundle["sources"]["import_status"] = "imported"
         with self.assertRaises(ValueError):
